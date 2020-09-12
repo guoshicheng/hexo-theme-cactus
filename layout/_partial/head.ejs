@@ -46,4 +46,7 @@
     <% if (theme.rss) { %>
       <link rel="alternate" href="<%= url_for(theme.rss) %>" title="<%= config.title %>" type="application/atom+xml" />
     <% } %>
+    <% if (theme.valine.enabled){ %>
+      <%- css(theme.CDN.valine_css) %>
+    <% } %>
 </head>

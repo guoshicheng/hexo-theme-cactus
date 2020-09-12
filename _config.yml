@@ -5,7 +5,7 @@
 # Link to a page that gives an overview of all your projects.
 # This can be an external link (e.g., to you GitHub profile) or to another
 # page within your website.
-projects_url: http://github.com/probberechts
+projects_url: http://github.com/guoshicheng
 
 # Set the page direction to RTL or LTR. default is LTR. (if you set it 'rtl', the 'vazir' font will be loaded.)
 direction: ltr
@@ -15,21 +15,20 @@ direction: ltr
 # languages/*.yml
 nav:
   home: /
-  about: /about/
   articles: /archives/
-  projects: projects_url
-
+  category: /categories/
+  tag: /tags/
+  github: http://github.com/guoshicheng
 
 # Links to your social media accounts.
 # The keys should correspond to Fontawesome icon names
 # (see https://fontawesome.com/icons?d=gallery&s=brands);
 # only 'mail' is an exception.
 social_links:
-  github: http://github.com/probberechts/cactus-dark
-  twitter: /
-  facebook: /
-  linkedin: /
-  mail: mailto:name@email.com
+  # twitter: /
+  # facebook: /
+  # linkedin: /
+  # mail: Mailto:programmerguo@gmail.com
 
 # Customize the overview with displaying a tagcloud on the index page.
 # Options: https://hexo.io/docs/helpers.html#tagcloud
@@ -42,7 +41,7 @@ tags_overview: false
 #   - sort_updated: sort posts by last modification date instead of creation date.
 posts_overview:
   show_all_posts: false
-  post_count: 5
+  post_count: 9
   sort_updated: false
 
 # Customize the archive view.
@@ -62,7 +61,7 @@ post:
 # Customize the copyright years
 # Note: if start_year/end_year not provided, will use current year.
 copyright:
-  start_year: 2016
+  start_year: 2017
   end_year:
 
 ##############################################################################
@@ -115,7 +114,6 @@ colorscheme: dark
 # Maximal width of the page in rem units.
 page_width: 48
 
-
 ##############################################################################
 # Miscellaneous
 ##############################################################################
@@ -130,15 +128,19 @@ open_graph:
   twitter_id:
   google_plus:
 
-
 ##############################################################################
 # Plugins
 ##############################################################################
 
-# Fill in your Disqus Comments Shortname to enable Disqus comments.
-disqus:
-  enabled: false
-  shortname: cactus-1
+# Fill in your Valine Comments APP ID/APP Key to enable Valine comments.
+valine:
+  enabled: true
+  appId: beVfEl7SwSIDDxYiDNGSlVfx-gzGzoHsz # APP ID
+  appKey: xcMwjxJsob4SNS2bGtzgVlgp # APP Key
+  pageSize: 10 # comment list page size
+  avatar: retro # gravatar style https://valine.js.org/#/avatar
+  placeholder: Just go go ！ # valine comment input placeholder (like: Please leave your footprints)
+  requiredFields: nick,mail # required fields (nick/mail)
 
 # Fill in your Google Analytics tracking ID to enable Google Analytics.
 google_analytics:
@@ -147,10 +149,35 @@ google_analytics:
 
 # Fill in your Baidu Analytics tracking ID to enable Baidu Analytics.
 baidu_analytics:
-  enabled: false
-  id: 2e6da3c375c8a87f5b664cea6d4cb29c
+  enabled: true
+  id: f56fa43cf299086b1a199f08a034c36d
 
 # Fill in you Gravatar user id / email if you want to use your gravatar as the
 # logo and/or favicons of you website.
 gravatar:
   email: name@email.com
+
+CDN:
+  # main
+  main: /js/main.js
+  
+  # jquery
+  jquery: https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js
+
+  # font
+  Meslo_LG: https://cdn.jsdelivr.net/gh/guoshicheng/cdn/lib/meslo-LG/MesloLGS-Regular.ttf
+  FZYouHJW_508R: https://cdn.jsdelivr.net/gh/guoshicheng/cdn/lib/FZYouH/FZYouHJW_508R.ttf
+
+  # fontawesome
+  fontawesome: https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css
+
+  # clipboard
+  clipboard: https://cdn.jsdelivr.net/gh/guoshicheng/cdn/lib/clipboard/clipboard.min.js
+
+  # comments
+  valine_js: https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.Pure.min.js
+  valine_css: https://cdn.jsdelivr.net/gh/guoshicheng/cdn/lib/Valine/valine.css
+
+  # justifiedGallery
+  justifiedGallery_js: https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js
+  justifiedGallery_css: https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css
