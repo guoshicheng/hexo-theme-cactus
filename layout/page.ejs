@@ -4,20 +4,7 @@
       <% if (page.search || page.type === "search") { %>
         <%- partial('_partial/search') %>
       <% } else if (page.type === "tags") { %>
-          <div id="tag-cloud">
-            <div class="tag-cloud-title">
-                <% var visibleTags = 0 %>
-                <% site.tags.each(function(tag){ %>
-                  <% if (tag.length) { %>
-                    <% visibleTags += 1 %>
-                  <% } %>
-                <% }) %>
-                <%- _p('counter.tag_cloud', visibleTags) %>
-            </div>
-            <div class="tag-cloud-tags">
-              <%- tagcloud({min_font: 12, max_font: 30, amount: 300}) %>
-            </div>
-          </div>
+          <%- partial('_partial/tag') %>
         <% } else if (page.type === 'categories') { %>
           <div id="categories">
             <div class="category-list-title">
@@ -38,3 +25,6 @@
         <% } %>
   </div>
 </article>
+<% if (page.comments) { %>
+  <%- partial('_partial/comments') %>
+<% } %>
