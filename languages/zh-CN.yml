@@ -6,6 +6,8 @@ nav:
   tag: 标签
   category: 分类
   search: 搜索
+  diary: 日记
+  messageboard: 留言
 
 footer:
   copyright: Copyright
