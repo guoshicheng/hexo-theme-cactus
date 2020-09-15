@@ -1,28 +1,16 @@
 <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
   <%- partial('_partial/post/gallery') %>
+  <h1><%= page_title() %></h1>
   <div class="content" itemprop="articleBody">
       <% if (page.search || page.type === "search") { %>
         <%- partial('_partial/search') %>
       <% } else if (page.type === "tags") { %>
-          <%- partial('_partial/tag') %>
-        <% } else if (page.type === 'categories') { %>
-          <div id="categories">
-            <div class="category-list-title">
-                <% var visibleCategories = 0 %>
-                <% site.categories.each(function(cat){ %>
-                  <% if (cat.length) { %>
-                    <% visibleCategories += 1 %>
-                  <% } %>
-                <% }) %>
-                <%- _p('counter.categories', visibleCategories) %>
-            </div>
-            <div class="category-list">
-              <%- list_categories() %>
-            </div>
-          </div>
-        <% } else { %>
-          <%- page.content %>
-        <% } %>
+        <%- partial('_partial/tag') %>
+      <% } else if (page.type === 'categories') { %>
+        <%- partial('_partial/category') %>
+      <% } else { %>
+        <%- page.content %>
+      <% } %>
   </div>
 </article>
 <% if (page.comments) { %>

@@ -7,8 +7,6 @@
 # page within your website.
 projects_url: http://github.com/guoshicheng
 
-# Set the page direction to RTL or LTR. default is LTR. (if you set it 'rtl', the 'vazir' font will be loaded.)
-direction: ltr
 # Configure the navigation menu.
 # A pair 'Key: url' will result in a link to 'url' with the name 'Key' in the
 # navigation menu. Optionally, you can add translations for the 'Key' in
@@ -20,6 +18,13 @@ nav:
   messageboard: /messageboard/
   github: http://github.com/guoshicheng
 
+section:
+  code: /categories/code/
+  note: /categories/note/
+  plan: /categories/plan/
+  reprint: /categories/reprint/
+  think: /categories/think/
+
 # Links to your social media accounts.
 # The keys should correspond to Fontawesome icon names
 # (see https://fontawesome.com/icons?d=gallery&s=brands);
@@ -30,10 +35,6 @@ social_links:
   # linkedin: /
   # mail: Mailto:programmerguo@gmail.com
 
-# Customize the overview with displaying a tagcloud on the index page.
-# Options: https://hexo.io/docs/helpers.html#tagcloud
-tags_overview: false
-
 # Customize the overview with the most recent blog posts on the index page.
 # Options:
 #   - show_all_posts: whether to show all available posts.
@@ -41,10 +42,14 @@ tags_overview: false
 #   - sort_updated: sort posts by last modification date instead of creation date.
 posts_overview:
   show_all_posts: false
-  post_count: 9
+  post_count: 3
   sort_updated: false
 
 # Customize the archive view.
+# Customize the overview with displaying a tagcloud on the archive page.
+# Options: https://hexo.io/docs/helpers.html#tagcloud
+tags_overview: true
+
 # Options:
 #   - sort_updated: sort posts by last modification date instead of creation date.
 # Note: this does not work together with pagination, since the pagination

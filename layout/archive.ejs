@@ -1,10 +1,19 @@
-<%- partial('_partial/tag') %>
+
+<% if (is_tag() && site.tags.length) { %>
+  <%- partial('_partial/tag') %>
+<% } else if (is_category() && site.categories.length) { %>
+  <%- partial('_partial/category') %>
+<% } else if (theme.tags_overview && site.tags.length) { %>
+  <%- partial('_partial/tag') %>
+<% } %>
 <div id="archive">
+  <h1><%= page_title() %></h1>
   <ul class="post-list">
     <% var year = 0 %>
     <% var change = false %>
     <% var field_sort = theme.archive.sort_updated ? 'updated' : 'date' %>
-    <% page.posts.sort(field_sort, 'desc').each(function(post) { %>
+    <% var posts = is_archive() ? site.posts: page.posts %>
+    <% posts.sort(field_sort, 'desc').each(function(post) { %>
       <% var itemYear = date(post[field_sort], 'YYYY') - 0 %>
       <% change = year !== itemYear %>
       <% year = change ? itemYear : year %>
@@ -17,5 +26,4 @@
       </li>
     <% }); %>
   </ul>
-  <%- partial('_partial/pagination') %>
 </div>

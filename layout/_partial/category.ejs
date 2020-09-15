@@ -1,0 +1,14 @@
+<div id="categories">
+    <div class="category-list-title">
+        <% var visibleCategories = 0 %>
+        <% site.categories.each(function(cat){ %>
+            <% if (cat.length) { %>
+            <% visibleCategories += 1 %>
+            <% } %>
+        <% }) %>
+        <%- _p('counter.categories', visibleCategories) %>
+    </div>
+    <div class="category-list">
+        <%- list_categories() %>
+    </div>
+</div>  

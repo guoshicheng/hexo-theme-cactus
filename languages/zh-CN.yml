@@ -20,6 +20,11 @@ index:
   projects: 项目
   topics: 标签
   most_recent: 最新的文章
+  code: 编程
+  note: 笔记
+  plan: 计划
+  reprint: 转载
+  think: 思考
 
 post:
   desktop:
